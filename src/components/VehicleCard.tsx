@@ -25,7 +25,7 @@ export function VehicleCard({ vehicle }:any) {
           }}
         />
         {/* Badges */}
-        <div className="absolute top-2 left-2 flex gap-2 z-10 pr-1">
+        <div className="absolute top-2 left-2 flex gap-2 z-10 ">
           {/* <span className="bg-orange-500 text-white px-2 py-1 rounded-md text-xs sm:text-sm shadow-md">
             Locally Used
           </span> */}

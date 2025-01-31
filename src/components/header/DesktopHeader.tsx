@@ -40,7 +40,7 @@ export function DesktopHeader() {
           </div>
           <div className="flex gap-4">
             <button className="bg-white text-[#fe2a39] px-4 py-1 rounded">Register</button>
-            <button className="bg-white text-[#fe2a39] px-4 py-1 rounded">Login</button>
+            <button className="bg-white text-[rgb(254,42,57)] px-4 py-1 rounded">Login</button>
           </div>
         </div>
       </div>
