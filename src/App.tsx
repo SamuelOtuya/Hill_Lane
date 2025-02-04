@@ -4,6 +4,9 @@ import Homepage from './pages/Homepage'
 import SingleCar from './pages/SingleCar'
 import FindCar from './pages/FindCar'
 import AboutUs from './pages/AboutUs'
+import ContactUs from './pages/ContactUs'
+import FAQs from './pages/FAQs'
+import Blogs from './pages/Blogs'
 
 function App() {
 
@@ -14,6 +17,9 @@ function App() {
 <Route path="/single-car/:id"element={<SingleCar/>}/>
 <Route path='/find-car'element={<FindCar/>}/>
 <Route path='/about'element={<AboutUs/>}/>
+<Route path='/contact'element={<ContactUs/>}/>
+<Route path='/faqs'element={<FAQs/>}/>
+<Route path='/blog'element={<Blogs/>}/>
 
   </Routes>
    </DefaultLayout>
