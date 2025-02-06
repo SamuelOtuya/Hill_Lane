@@ -2,9 +2,10 @@
 
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { FaFacebook, FaInstagram, FaPhoneAlt, FaTwitter, FaWhatsapp } from "react-icons/fa";
+import { FaPhoneAlt, FaSearch } from "react-icons/fa";
+import { IoMail, IoLocationSharp } from "react-icons/io5";
+import { FiLogIn } from "react-icons/fi";
 import logoH from "../../assets/logoH.jpg";
-import { IoMail } from "react-icons/io5";
 
 type Tab = {
   name: string;
@@ -20,57 +21,66 @@ export function DesktopHeader() {
     { name: "About Us", link: "/about" },
     { name: "Contact Us", link: "/contact" },
     { name: "Blog", link: "/blog" },
-    { name: "Faqs", link: "/faqs" },
+    { name: "FAQs", link: "/faqs" },
   ];
 
   return (
     <div>
       {/* Top Header */}
-      <div className="bg-[#020e26] text-white p-3">
-        <div className="container mx-auto flex justify-between items-center">
-          <div className="flex gap-4">
-            <FaFacebook href="https://www.facebook.com/urbandriveautosltd/"/>
-            <FaTwitter href="https://x.com/UrbanDriveAutos?t=FqAaqFH3g5-vusYu4zKAuw"/>
-            <FaInstagram href="https://www.instagram.com/urbandriveautos/"/>
-            <FaWhatsapp href="https://api.whatsapp.com/send?phone=254770070300"/>
-            <FaPhoneAlt href=""/>
-            <span>(+254) 770070300</span>
-            <IoMail />
-            <span>info@urbandrive.co.ke</span>
-          </div>
-          <div className="flex gap-4">
-            <button className="bg-white text-[#fe2a39] px-4 py-1 rounded">Register</button>
-            <button className="bg-white text-[rgb(254,42,57)] px-4 py-1 rounded">Login</button>
+      <div className="bg-[#020e26] text-white p-4">
+        <div className="container mx-auto flex justify-between items-center text-sm">
+          {/* Left: Contact Info */}
+          <div className="flex items-center gap-6">
+            <div className="flex items-center gap-2">
+              <FaPhoneAlt className="text-gray-300" />
+              <span>Call Us On - +254792254254</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <IoMail className="text-gray-300" />
+              <span>info@hilllaneautoshop.co.ke</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <IoLocationSharp className="text-gray-300" />
+              <span>Opposite Flamingo Towers, Upperhill, Nairobi, Kenya</span>
+            </div>
           </div>
         </div>
       </div>
 
       {/* Navigation */}
-      <div>
-        <nav className="bg-white p-5">
-          <div className="container mx-auto flex justify-between items-center">
-            <div>
-              <img src={logoH} alt="Urban Drive Logo" className="h-8 w-25" />
-            </div>
-            <div className="flex gap-4">
-              {tabs.map((tab) => (
-                <Link key={tab.name} to={tab.link}>
-                  <button
-                    className={`px-4 py-2 rounded ${
-                      activeTab === tab.name
-                        ? "bg-[#fe2a39] text-white"
-                        : "hover:text-[#fe2a39]"
-                    }`}
-                    onClick={() => setActiveTab(tab.name)}
-                  >
-                    {tab.name}
-                  </button>
-                </Link>
-              ))}
-            </div>
+      <nav className="bg-white shadow-md p-4">
+        <div className="container mx-auto flex justify-between items-center">
+          {/* Logo */}
+          <Link to="/">
+            <img src={logoH} alt="Hill Lane Auto Shop" className="h-10" />
+          </Link>
+
+          {/* Navigation Links */}
+          <div className="flex gap-6">
+          <div className="text-xl pt-1"><FaSearch/></div>
+            {tabs.map((tab) => (
+              <Link key={tab.name} to={tab.link}>
+                <button
+                  className={`text-[15px] font-bold uppercase ${
+                    activeTab === tab.name ? "text-[#fe2a39]" : "text-black hover:text-[#fe2a39] border-b-2 border-transparent hover:border-[#fe2a39] transition-all duration-300"
+                  }`}
+                  onClick={() => setActiveTab(tab.name)}
+                >
+                  {tab.name}
+                </button>
+              </Link>
+            ))}
           </div>
-        </nav>
-      </div>
+
+          {/* Login Button */}
+          <Link to="/login">
+            <button className="flex items-center gap-2 border px-4 py-1 text-blue-600 border-blue-600 rounded-md hover:bg-blue-600 hover:text-white transition">
+              <FiLogIn />
+              Login
+            </button>
+          </Link>
+        </div>
+      </nav>
     </div>
   );
 }
