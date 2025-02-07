@@ -190,7 +190,7 @@ export default function CarDetails() {
 <Button 
   color="success" 
   className="w-full" 
-  onClick={() => window.open('https://api.whatsapp.com/send?phone=254770070300', '_blank')}
+  onClick={() => window.open('https://api.whatsapp.com/send?phone=254792254254', '_blank')}
 >
   <FaWhatsapp className="mr-2" /> 
   WhatsApp Message
@@ -202,15 +202,15 @@ export default function CarDetails() {
             <div className="space-y-3">
               <div className="flex items-center gap-2">
                 <FaEnvelope className="text-gray-500" />
-                <span>info@urbandrive.co.ke</span>
+                <span>info@hilllaneautoshop.co.ke</span>
               </div>
               <div className="flex items-center gap-2">
                 <FaPhone className="text-gray-500" />
-                <span>(+254) 770070300</span>
+                <span>(+254) 792254254</span>
               </div>
               <div className="flex items-center gap-2">
                 <FaMapMarkerAlt className="text-gray-500" />
-                <span>KIAMBU ROAD - BYPASS JUNCTION</span>
+                <span>Opposite Flamingo Towers, Upperhill, Nairobi, Kenya</span>
               </div>
             </div>
           </div>
@@ -219,13 +219,13 @@ export default function CarDetails() {
             <h3 className="text-lg font-semibold mb-4">Shares</h3>
             <div className="flex gap-2">
               <button className="p-2 bg-blue-600 rounded-full">
-                <FaFacebook className="text-white" />
+                <a href='https://www.facebook.com/hilllaneautoshop/'><FaFacebook className="text-white" /></a>
               </button>
               <button className="p-2 bg-blue-400 rounded-full">
                 <FaTwitter className="text-white" />
               </button>
               <button className="p-2 bg-green-500 rounded-full">
-                <FaWhatsapp href='https://api.whatsapp.com/send?phone=254770070300' className="text-white" />
+                <FaWhatsapp href='https://api.whatsapp.com/send?phone=254792254254' className="text-white" />
               </button>
             </div>
           </div>

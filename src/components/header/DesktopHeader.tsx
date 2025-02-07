@@ -1,7 +1,6 @@
 "use client";
 
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { FaPhoneAlt, FaSearch } from "react-icons/fa";
 import { IoMail, IoLocationSharp } from "react-icons/io5";
 import { FiLogIn } from "react-icons/fi";
@@ -13,7 +12,7 @@ type Tab = {
 };
 
 export function DesktopHeader() {
-  const [activeTab, setActiveTab] = useState("Home");
+  const location = useLocation(); // ✅ Get current pathname
 
   const tabs: Tab[] = [
     { name: "Home", link: "/" },
@@ -48,7 +47,7 @@ export function DesktopHeader() {
       </div>
 
       {/* Navigation */}
-      <nav className="bg-white shadow-md p-4">
+      <nav className="bg-white shadow-md p-5">
         <div className="container mx-auto flex justify-between items-center">
           {/* Logo */}
           <Link to="/">
@@ -57,14 +56,17 @@ export function DesktopHeader() {
 
           {/* Navigation Links */}
           <div className="flex gap-6">
-          <div className="text-xl pt-1"><FaSearch/></div>
+            <Link to="/find-car">
+            <div className="text-xl pt-1"><FaSearch /></div>
+            </Link>
             {tabs.map((tab) => (
               <Link key={tab.name} to={tab.link}>
                 <button
                   className={`text-[15px] font-bold uppercase ${
-                    activeTab === tab.name ? "text-[#fe2a39]" : "text-black hover:text-[#fe2a39] border-b-2 border-transparent hover:border-[#fe2a39] transition-all duration-300"
+                    location.pathname === tab.link
+                      ? "text-[#fe2a39] border-b-2 border-[#fe2a39]"
+                      : "text-black hover:text-[#fe2a39] border-b-2 border-transparent hover:border-[#fe2a39] transition-all duration-300"
                   }`}
-                  onClick={() => setActiveTab(tab.name)}
                 >
                   {tab.name}
                 </button>
@@ -73,8 +75,8 @@ export function DesktopHeader() {
           </div>
 
           {/* Login Button */}
-          <Link to="/login">
-            <button className="flex items-center gap-2 border px-4 py-1 text-blue-600 border-blue-600 rounded-md hover:bg-blue-600 hover:text-white transition">
+          <Link to="https://admin.urbandrive.co.ke">
+            <button className="flex items-center gap-2 border px-4 py-1 text-blue-600 border-blue-600 rounded-md hover:bg-blue-600 hover:text-white transition" >
               <FiLogIn />
               Login
             </button>

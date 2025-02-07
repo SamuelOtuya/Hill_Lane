@@ -5,13 +5,18 @@ import { useState } from "react";
 import logoH from "../../assets/logoH.jpg";
 import {
   HiChartPie,
+  HiHome,
   HiLogin,
   HiMenu,
+  HiNewspaper,
   HiPencil,
+  HiPhone,
+  HiQuestionMarkCircle,
   HiSearch,
   HiShoppingBag,
   HiUsers,
 } from "react-icons/hi";
+import { Link } from "react-router-dom";
 
 export function MobileNav() {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,7 +26,9 @@ export function MobileNav() {
   return (
     <>
       <div className="flex px-5 py-3 justify-between items-center">
+        <Link to="/">
       <img src={logoH} alt="Urban Drive Logo" className="h-10 w-30" />
+      </Link>
         <button onClick={() => setIsOpen(true)}>
           <HiMenu className="text-2xl text-slate-600" />
         </button>
@@ -46,30 +53,30 @@ export function MobileNav() {
                 </form>
                 <Sidebar.Items>
                   <Sidebar.ItemGroup>
-                    <Sidebar.Item href="/" icon={HiChartPie}>
+                    <Sidebar.Item href="/" icon={HiHome}>
                       Home
                     </Sidebar.Item>
                     <Sidebar.Item
                       href="/find-car"
-                      icon={HiShoppingBag}
+                      icon={HiSearch}
                     >
                       Find a Car
                     </Sidebar.Item>
-                    <Sidebar.Item href="/about" icon={HiUsers}>
+                    <Sidebar.Item href="/about" icon={HiShoppingBag}>
                       About Us
                     </Sidebar.Item>
-                    <Sidebar.Item href="/contact" icon={HiLogin}>
+                    <Sidebar.Item href="/contact" icon={HiPhone}>
                       Contact Us
                     </Sidebar.Item>
                     <Sidebar.Item
                       href="/blogs"
-                      icon={HiPencil}
+                      icon={HiNewspaper}
                     >
                       Blogs
                     </Sidebar.Item>
                     <Sidebar.Item
                       href="/faqs"
-                      icon={HiPencil}
+                      icon={HiQuestionMarkCircle}
                     >
                       FAQs
                     </Sidebar.Item>

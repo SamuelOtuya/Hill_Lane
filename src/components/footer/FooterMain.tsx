@@ -50,7 +50,7 @@ export function FooterMain() {
             <h1 className="text-[#fe2a39] text-lg font-semibold">Contact Us</h1>
             <p className="text-sm">Follow us on social media:</p>
             <div className="flex space-x-4">
-              <Footer.Icon href="#" icon={BsFacebook} className="text-white hover:text-[#fe2a39] transition-colors" />
+              <Footer.Icon href="https://www.facebook.com/hilllaneautoshop/" icon={BsFacebook} className="text-white hover:text-[#fe2a39] transition-colors" />
               <Footer.Icon href="#" icon={BsInstagram} className="text-white hover:text-[#fe2a39] transition-colors" />
               <Footer.Icon href="#" icon={BsTwitter} className="text-white hover:text-[#fe2a39] transition-colors" />
               <Footer.Icon href="#" icon={BsGithub} className="text-white hover:text-[#fe2a39] transition-colors" />
@@ -58,10 +58,30 @@ export function FooterMain() {
             </div>
           </div>
         </div>
-        <div className="w-full bg-gray-700 px-4 py-6 sm:flex sm:items-center sm:justify-between">
-          <Footer.Copyright href="#" by="Hillane Autoshop™" year={2024} className="text-sm" />
+        <div className="w-full bg-[#2b3444] px-4 py-6 sm:flex sm:items-center sm:justify-between items-center">
           <div className="mt-4 flex space-x-6 sm:mt-0 sm:justify-center">
-            <p className="text-sm text-gray-400">Site Developed and Managed by <a href="" className="text-green-500">Greenbear Technologies</a>, 2025</p>
+          <p className="text-center text-white">
+            Copyright © {new Date().getFullYear()}{" "}
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-orange-600 font-medium text-red-600"
+            >
+              Hillane Autoshop™
+            </a>
+            
+            . Designed by{" "}
+            <a
+              href="https://gbt.co.ke/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-green-500 font-medium text-green-700"
+            >
+              GreenBear Technologies
+            </a>
+            . All rights reserved.
+          </p>
           </div>
         </div>
       </div>

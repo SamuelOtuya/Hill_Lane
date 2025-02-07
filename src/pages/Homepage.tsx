@@ -6,6 +6,7 @@ import VehicleCard from "../components/VehicleCard";
 import { VehicleType } from "../types/types";
 import Blog from "./Blogs";
 import { TbCar } from "react-icons/tb";
+import { Link, Navigate, NavLink } from "react-router-dom";
 
 const Homepage = () => {
   const [loading, setLoading] = useState<boolean>(false);
@@ -68,11 +69,15 @@ const Homepage = () => {
         ))}
       </div>
 
+
       <div className="flex justify-center mb-8 px-4 mt-2">
-        <button className="bg-orange-600 text-white px-6 py-2 rounded hover:bg-orange-600 transition-colors">
+      <Link to='/find-car'>
+        <button className="bg-[#fe2a39] text-white px-6 py-2 rounded hover:bg-orange-600 transition-colors">
           View all our stock
         </button>
+        </Link>
       </div>
+      
 
       {/* Blog Section */}
       <Blog />

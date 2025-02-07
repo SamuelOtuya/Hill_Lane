@@ -9,7 +9,7 @@ export function Slider({ images }: SliderProps) {
   const imageArray = images.map((image) => ({
     original: image,
     thumbnail: image, // You can provide a smaller version for the thumbnail
-    description: "Image description here", // Optional description for each image
+    // description: "Image description here", // Optional description for each image
   }));
 
   return (

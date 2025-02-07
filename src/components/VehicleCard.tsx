@@ -19,7 +19,7 @@ export function VehicleCard({ vehicle }:any) {
         <img
           src={vehicle.images}
           alt={vehicle.title}
-          className="absolute inset-0 w-full h-full object-contain bg-gray-100"
+          className="absolute inset-0 w-full h-full object-contain bg-gray-100 transition-transform duration-300 hover:scale-110"
           onError={(_e) => {
              "/api/placeholder/400/300"; // Fallback image
           }}
