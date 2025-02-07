@@ -6,10 +6,10 @@ import VehicleCard from "../components/VehicleCard";
 import { VehicleType } from "../types/types";
 import Blog from "./Blogs";
 import { TbCar } from "react-icons/tb";
-import { Link, Navigate, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Homepage = () => {
-  const [loading, setLoading] = useState<boolean>(false);
+  const [, setLoading] = useState<boolean>(false);
   const [vehicles, setVehicles] = useState<VehicleType[]>([]);
 
   /// Get car makes

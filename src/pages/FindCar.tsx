@@ -7,7 +7,7 @@ import { VehicleType } from '../types/types';
 
 
 const FindCar = () => {
-  const [loading,setLoading]=useState<boolean>(false);
+  const [,setLoading]=useState<boolean>(false);
   const [vehicles,setVehicles]=useState<VehicleType[]>([]);
 
    ///getcar makes
