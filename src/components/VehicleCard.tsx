@@ -14,23 +14,23 @@ export function VehicleCard({ vehicle }:any) {
       }
       className="flex flex-col h-full shadow-lg hover:shadow-2xl transition-shadow duration-300 cursor-pointer"
     >
-      {/* Image Section with Improved Sizing */}
+      
       <div className="relative w-full  h-full aspect-[4/3] overflow-hidden rounded-t-lg">
         <img
           src={vehicle.images}
           alt={vehicle.title}
           className="absolute inset-0 w-full h-full object-contain bg-gray-100"
-          onError={(e) => {
+          onError={(_e) => {
              "/api/placeholder/400/300"; // Fallback image
           }}
         />
-        {/* Badges */}
+        
         <div className="absolute top-2 left-2 flex gap-2 z-10 ">
           {/* <span className="bg-orange-500 text-white px-2 py-1 rounded-md text-xs sm:text-sm shadow-md">
             Locally Used
           </span> */}
           <span className="bg-green-500 text-white px-3 py-1 rounded-md text-xs sm:text-sm shadow-md">
-            Available
+            {vehicle.status}
           </span>
         </div>
       </div>
@@ -50,7 +50,7 @@ export function VehicleCard({ vehicle }:any) {
         <div className="grid grid-cols-3 gap-2 text-gray-600 mt-4">
           <div className="flex items-center gap-1 text-sm">
             <FaCar className="text-[#fe2a39]" />
-            <span>4WD</span>
+            <span>{vehicle.transmission}</span>
           </div>
           <div className="flex items-center gap-1 text-sm">
             <FaCalendarAlt className="text-[#fe2a39]" />

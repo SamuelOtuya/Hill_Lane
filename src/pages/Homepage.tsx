@@ -24,7 +24,7 @@ const Homepage = () => {
 
       const res = await API.get("client/home-listing", {
         params: {
-          limit: 8,
+          limit: 12,
         },
       });
       setVehicles(res.data.cars);
@@ -41,12 +41,13 @@ const Homepage = () => {
   }, []);
 
   return (
+    
     <div>
-      <HomeCouresel />
-
+      <div>< HomeCouresel /></div>
+      
       <div className="flex flex-col md:flex-row items-center md:items-center justify-between gap-4 p-4 w-full">
   {/* Icon & Text Section */}
-  <div className="flex items-center gap-2 md:gap-3 w-full md:w-auto pb-5">
+  <div className="flex items-center gap-2 md:gap-3 w-full md:w-auto">,
     <TbCar className="text-red-600 text-3xl md:text-4xl" />
     <h2 className="text-2xl md:text-3xl font-bold text-gray-800">
       Find Your <span className="text-red-600">Car</span>
@@ -65,6 +66,12 @@ const Homepage = () => {
         {vehicles.map((vehicle, index) => (
           <VehicleCard key={index} vehicle={vehicle} />
         ))}
+      </div>
+
+      <div className="flex justify-center mb-8 px-4 mt-2">
+        <button className="bg-orange-600 text-white px-6 py-2 rounded hover:bg-orange-600 transition-colors">
+          View all our stock
+        </button>
       </div>
 
       {/* Blog Section */}

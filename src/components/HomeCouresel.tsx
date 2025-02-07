@@ -15,7 +15,7 @@ export function HomeCouresel() {
             key={i}
             src={banner}
             alt="Banner Image"
-            className="h-full w-full object-cover"
+            className="h-full w-full object-contain"
           />
         ))}
       </Carousel>

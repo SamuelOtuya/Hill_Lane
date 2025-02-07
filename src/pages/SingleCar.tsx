@@ -28,6 +28,7 @@ export default function CarDetails() {
   const [vehicleFeatures,setVehicleFeatures ] = useState<string[]>([])
   
  const getSingleVehicle = async ()=>{
+  window.scrollTo({ top: 0, behavior: "smooth" });
   try {
     const res = await API.get("client/vehicle-single",{
       params:{

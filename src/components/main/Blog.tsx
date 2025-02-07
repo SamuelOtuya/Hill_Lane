@@ -98,7 +98,7 @@ const Blog = () => {
                   </div>
                   <a
                     href={`/single-blog/${blog.id}-${blog.title.replace(/\s+/g, "-").toLowerCase()}`}
-                    className="text-blue-600 hover:underline"
+                    className="text-red-600 hover:underline"
                   >
                     Read More
                   </a>

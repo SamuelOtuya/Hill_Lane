@@ -23,7 +23,7 @@ const FindCar = () => {
 
         const res = await API.get("client/home-listing",{
             params:{
-                limit:8
+                limit:300
             }
         })
         setVehicles(res.data.cars)

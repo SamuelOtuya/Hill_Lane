@@ -7,6 +7,7 @@ import AboutUs from './pages/AboutUs'
 import ContactUs from './pages/ContactUs'
 import FAQs from './pages/FAQs'
 import Blogs from './pages/Blogs'
+import SearchPage from './pages/SearchPage'
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
 <Route path='/contact'element={<ContactUs/>}/>
 <Route path='/faqs'element={<FAQs/>}/>
 <Route path='/blog'element={<Blogs/>}/>
+<Route path='/search'element={<SearchPage/>}/>
 
   </Routes>
    </DefaultLayout>

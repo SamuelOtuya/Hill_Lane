@@ -61,7 +61,7 @@ export function FooterMain() {
         <div className="w-full bg-gray-700 px-4 py-6 sm:flex sm:items-center sm:justify-between">
           <Footer.Copyright href="#" by="Hillane Autoshop™" year={2024} className="text-sm" />
           <div className="mt-4 flex space-x-6 sm:mt-0 sm:justify-center">
-            <p className="text-sm">Site Developed and Managed by Greenbear Technologies, 2025</p>
+            <p className="text-sm text-gray-400">Site Developed and Managed by <a href="" className="text-green-500">Greenbear Technologies</a>, 2025</p>
           </div>
         </div>
       </div>
