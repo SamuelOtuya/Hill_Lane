@@ -68,7 +68,7 @@ export function MobileNav() {
                 </form>
                 <Sidebar.Items>
                   <Sidebar.ItemGroup>
-                    <Sidebar.Item href="/" icon={HiHome}>
+                    <Sidebar.Item href="/vehicle-listings" icon={HiHome}>
                       Home
                     </Sidebar.Item>
                     <Sidebar.Item
@@ -77,7 +77,7 @@ export function MobileNav() {
                     >
                       Find a Car
                     </Sidebar.Item>
-                    <Sidebar.Item href="/about" icon={HiShoppingBag}>
+                    <Sidebar.Item href="/about-us" icon={HiShoppingBag}>
                       About Us
                     </Sidebar.Item>
                     <Sidebar.Item href="/contact" icon={HiPhone}>

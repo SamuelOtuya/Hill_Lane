@@ -15,10 +15,10 @@ function App() {
   return (
     <DefaultLayout>
       <Routes>
-        <Route path="/" element={<Homepage />} />
+        <Route path="/vehicle-listings" element={<Homepage />} />
         <Route path="/single-car/:id" element={<SingleCar />} />
         <Route path='/find-car' element={<FindCar />} />
-        <Route path='/about' element={<AboutUs />} />
+        <Route path='/about-us' element={<AboutUs />} />
         <Route path='/contact' element={<ContactUs />} />
         <Route path='/faqs' element={<FAQs />} />
         <Route path='/blog' element={<Blogs />} />

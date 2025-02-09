@@ -15,9 +15,9 @@ export function DesktopHeader() {
   const location = useLocation(); // ✅ Get current pathname
 
   const tabs: Tab[] = [
-    { name: "Home", link: "/" },
+    { name: "Home", link: "/vehicle-listings" },
     { name: "Find A Car", link: "/find-car" },
-    { name: "About Us", link: "/about" },
+    { name: "About Us", link: "/about-us" },
     { name: "Contact Us", link: "/contact" },
     { name: "Blog", link: "/blog" },
     { name: "FAQs", link: "/faqs" },
@@ -50,7 +50,7 @@ export function DesktopHeader() {
       <nav className="bg-white shadow-md p-5">
         <div className="container mx-auto flex justify-between items-center">
           {/* Logo */}
-          <Link to="/">
+          <Link to="/vehicle-listings">
             <img src={logoH} alt="Hill Lane Auto Shop" className="h-10" />
           </Link>
 
