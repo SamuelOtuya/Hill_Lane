@@ -12,11 +12,11 @@ export function FooterMain() {
         <div className="grid w-full grid-cols-2 gap-8 px-6 py-14 md:grid-cols-4 sm:px-20">
           <div className="space-y-5 text-white">
             <div className="flex items-center gap-3">
-              <FaLocationArrow className="text-[#fe2a39] text-2xl"/>
+              <FaLocationArrow className="text-[#fe2a39] text-xl"/>
               <span className="text-sm">Opposite Flamingo Towers, Upperhill, Nairobi, Kenya</span>
             </div>
             <div className="flex items-center gap-3">
-              <IoMail className="text-[#fe2a39] text-sm"/>
+              <IoMail className="text-[#fe2a39] text-lg"/>
               <span className="text-sm">Info@hillianeautoshop.co.ke</span>
             </div>
             <div className="flex items-center gap-3">

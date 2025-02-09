@@ -49,7 +49,7 @@ const Homepage = () => {
       </div>
   
       {/* Main Content Wrapper */}
-      <div className="max-w-7xl mx-auto sm:px-24">
+      <div className="max-w-8xl mx-auto sm:px-32">
         {/* Header Section */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 p-4 w-full">
           <div className="flex items-center gap-2 md:gap-3 w-full md:w-auto">
