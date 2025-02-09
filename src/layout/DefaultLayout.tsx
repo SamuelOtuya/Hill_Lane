@@ -19,7 +19,7 @@ const DefaultLayout = ({ children }: { children: React.ReactNode }) => {
 
       <div 
   className={`pt-4 min-h-screen ${
-    (pathname === "/search" || pathname === "/find-car" || pathname === "/" || pathname === "/single-car/:id") 
+    (pathname === "/search" || pathname === "/find-car" || pathname === "/faqs" || pathname === "/single-car/:id") 
       ? "grid md:grid-cols-[repeat(16,minmax(0,1fr))]" 
       : ""
   }`}

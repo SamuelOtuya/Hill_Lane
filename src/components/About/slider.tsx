@@ -13,7 +13,7 @@ export function Slider({ images }: SliderProps) {
   }));
 
   return (
-    <div className="w-96 max-w-full sm:w-64 md:w-full h-auto">
+    <div className="w-80 max-w-full sm:w-64 md:w-full h-auto">
       <ImageGallery items={imageArray} />
     </div>
   );

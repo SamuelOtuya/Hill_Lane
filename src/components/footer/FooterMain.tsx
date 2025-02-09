@@ -8,15 +8,15 @@ import { IoMail } from "react-icons/io5";
 export function FooterMain() {
   return (
     <Footer bgDark>
-      <div className="w-full">
-        <div className="grid w-full grid-cols-2 gap-8 px-6 py-12 md:grid-cols-4">
-          <div className="space-y-4 text-white">
+      <div className="w-full ">
+        <div className="grid w-full grid-cols-2 gap-8 px-6 py-14 md:grid-cols-4 sm:px-20">
+          <div className="space-y-5 text-white">
             <div className="flex items-center gap-3">
-              <FaLocationArrow className="text-[#fe2a39] text-lg"/>
+              <FaLocationArrow className="text-[#fe2a39] text-2xl"/>
               <span className="text-sm">Opposite Flamingo Towers, Upperhill, Nairobi, Kenya</span>
             </div>
             <div className="flex items-center gap-3">
-              <IoMail className="text-[#fe2a39] text-lg"/>
+              <IoMail className="text-[#fe2a39] text-sm"/>
               <span className="text-sm">Info@hillianeautoshop.co.ke</span>
             </div>
             <div className="flex items-center gap-3">
@@ -29,14 +29,14 @@ export function FooterMain() {
             </div>
           </div>
           <div className="space-y-4 text-white">
-            <h1 className="text-[#fe2a39] text-lg font-semibold">Our Info</h1>
+            <h1 className="text-[#fe2a39] text-xl font-semibold">Our Info</h1>
             <p className="text-sm">About Us</p>
             <p className="text-sm">Terms of Use</p>
             <p className="text-sm">Privacy Policy</p>
             <p className="text-sm">Environmental Policy</p>
           </div>
           <div className="space-y-4 text-white">
-            <h1 className="text-[#fe2a39] text-lg font-semibold">Subscribe Us</h1>
+            <h1 className="text-[#fe2a39] text-xl font-semibold">Subscribe Us</h1>
             <input 
               type="email" 
               placeholder="Your email" 
@@ -47,7 +47,7 @@ export function FooterMain() {
             </button>
           </div>
           <div className="space-y-4 text-white">
-            <h1 className="text-[#fe2a39] text-lg font-semibold">Contact Us</h1>
+            <h1 className="text-[#fe2a39] text-xl font-semibold">Contact Us</h1>
             <p className="text-sm">Follow us on social media:</p>
             <div className="flex space-x-4">
               <Footer.Icon href="https://www.facebook.com/hilllaneautoshop/" icon={BsFacebook} className="text-white hover:text-[#fe2a39] transition-colors" />
@@ -59,14 +59,14 @@ export function FooterMain() {
           </div>
         </div>
         <div className="w-full bg-[#2b3444] px-4 py-6 sm:flex sm:items-center sm:justify-between items-center">
-          <div className="mt-4 flex space-x-6 sm:mt-0 sm:justify-center">
+          <div className="mt-4 space-x-6 sm:mt-0 sm:justify-center">
           <p className="text-center text-white">
             Copyright © {new Date().getFullYear()}{" "}
             <a
               href="#"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-orange-600 font-medium text-red-600"
+              className="hover:text-red-800 font-medium text-red-600"
             >
               Hillane Autoshop™
             </a>
@@ -76,7 +76,7 @@ export function FooterMain() {
               href="https://gbt.co.ke/"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-green-500 font-medium text-green-700"
+              className="hover:text-green-600 font-medium text-green-500"
             >
               GreenBear Technologies
             </a>

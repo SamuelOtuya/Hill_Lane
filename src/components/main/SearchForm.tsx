@@ -33,18 +33,29 @@ const SearchForm = () => {
     navigate("/search",{state:{...data}})
   }
   
+  
+  
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 550) {
-        setIsSticky(true);
+      // Check if screen width is greater than 768px (Tailwind `md`)
+      if (window.innerWidth >= 768) {
+        if (window.scrollY > 550) {
+          setIsSticky(true);
+        } else {
+          setIsSticky(false);
+        }
       } else {
-        setIsSticky(false);
+        setIsSticky(false); // Disable sticky on small screens
       }
     };
-
+  
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
+  
 
   
   return (

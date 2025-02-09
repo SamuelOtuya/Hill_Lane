@@ -79,7 +79,7 @@ export default function CarDetails() {
 
   {/* Image Slider */}
   <div className="mb-6">
-    <div className="w-full h-auto">
+    <div className="w-full h-auto px-4">
       <Slider images={singleVehicleImages} />
     </div>
   </div>
