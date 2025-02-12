@@ -8,7 +8,7 @@ import ContactUs from './pages/ContactUs'
 import FAQs from './pages/FAQs'
 import Blogs from './pages/Blogs'
 import SearchPage from './pages/SearchPage'
-import ErrorPage from './pages/404'
+// import ErrorPage from './pages/404'
 
 function App() {
 
@@ -23,7 +23,7 @@ function App() {
         <Route path='/faqs' element={<FAQs />} />
         <Route path='/blog' element={<Blogs />} />
         <Route path='/search' element={<SearchPage />} />
-        <Route path='*' element={<ErrorPage />} />
+        <Route path='*' element={<Homepage/>} />
       </Routes>
     </DefaultLayout>
 

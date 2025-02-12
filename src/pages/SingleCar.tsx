@@ -65,7 +65,7 @@ export default function CarDetails() {
 };
 
   return (
-    <div className="max-w-7xl mx-auto p-4">
+    <div className="max-w-[100vw] sm:px-20">
       <div className="grid md:grid-cols-3 gap-8">
         {/* Car Images and Details */}
         <div className="md:col-span-2">
@@ -79,7 +79,7 @@ export default function CarDetails() {
 
   {/* Image Slider */}
   <div className="mb-6">
-    <div className="w-full h-auto px-4">
+    <div className="max-w-[100vw]">
       <Slider images={singleVehicleImages} />
     </div>
   </div>
